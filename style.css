@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Mulish', sans-serif;
+  background-color: aliceblue;
+  margin: 0;
+}
+
+h1 {
+  margin: 50px 0 30px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.faq-container {
+max-width: 600px;
+margin: 0 auto;
+}
+
+.faq {
+  background-color: transparent;
+  border-radius: 10px;
+  border: 1px solid rgb(209, 207, 207);
+  margin: 20px 0;
+  padding:  30px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s ease;
+}
+
+.faq.active {
+  background-color: white;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.faq.active::before, 
+.faq.active::after {
+  content: '\f075';
+  font-family: 'Font Awesome 6 Free';
+  color: rgb(14, 124, 88);
+  font-size: 7rem;
+  opacity: 0.2;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 0;
+}
+
+.faq.active::before {
+  color: rgb(111, 111, 236);
+  top: -10px;
+  left: -30px;
+  transform:rotateY(-180deg);
+}
+
+.faq-title {
+ margin: 0 35px 0 0;
+
+
+
+}
+
+.faq-text {
+  display: none;
+  margin: 30px 0 0;
+}
+
+.faq.active .faq-text {
+  display: block;
+
+}
+
+.btn {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  position: absolute;
+  padding: 0;
+  top: 30px;
+  right: 30px;
+  height: 30px;
+  width: 30px;
+}
+
+.btn .fa-times {
+  display: none;
+}
+
+.faq.active .btn .fa-times {
+  display: block;
+}
+
+.faq.active .btn .fa-chevron-down {
+  display: none;
+}
+
+.faq.active .btn {
+  border-radius: 50%;
+  border: 1px solid rgb(183, 181, 181);
+  background-color: rgb(183, 181, 181);
+  color: rgb(255, 255, 255);
+}
